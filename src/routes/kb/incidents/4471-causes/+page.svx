@@ -1,0 +1,44 @@
+---
+layout: runbook
+title: '#4471 · two causes, one ticket'
+owner: support desk
+status: draft
+reviewed: 2026-11-02
+signature: redi
+---
+
+<script>
+  import CauseTable from '#lib/kb/CauseTable.svelte';
+  import Callout from '#lib/kb/Callout.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+</script>
+
+Ticket **#4471** was marked known as a single parser bug: the shared parser reads
+dates month-first while day-first tenants write the day first. The merge count is
+**412** unique reports.
+
+The live cause table disagrees. The same 412 reports resolve to **two** causes.
+Only one of them is the ticket the desk kept.
+
+<Callout kind="warn">
+#4471 is not one problem. Open one engineering ticket per cause below.
+</Callout>
+
+## Causes in #4471
+
+<CauseTable ticket={4471} />
+
+## Tickets to file
+
+1. **parser** — 379 reports. Shared parser reads month first; day-first tenants
+   (app, email, and booking-v2 form) get flipped dates. This is the cause #4471
+   already claims.
+2. **hint** — 33 reports. booking-v3 form prints `MM/DD/YYYY` under the date
+   field while the form still reads the tenant's day-first way. Form-only,
+   three tenants (alder.physio, copper.studio, pale.harbour). Needs its own
+   ticket; it is not the parser.
+
+Intake tags disagree with cause often enough that tagging alone cannot justify
+the merge. Deduping by subject (decision 0001) put both causes into one thread.
+
+<RenderStamp signature="redi" />
