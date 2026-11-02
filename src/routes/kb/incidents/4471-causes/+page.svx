@@ -37,9 +37,6 @@ Only one of them is the ticket the desk kept.
    field while the form still reads the tenant's day-first way. Form-only,
    three tenants (alder.physio, copper.studio, pale.harbour). Needs its own
    ticket; it is not the parser.
-3. **one-day move** — 5 reports footnoted in desk notes (`oneDayMove`). Bodies
-   show adjacent-day / timezone shifts, not month flips. Counted under
-   `parser` by tenant, but not the same bug.
 
 Intake tags disagree with cause often enough that tagging alone cannot justify
 the merge. Deduping by subject (decision 0001) put both causes into one thread.
@@ -48,7 +45,7 @@ the merge. Deduping by subject (decision 0001) put both causes into one thread.
 
 Per the desk update on #4471 (closed 05 Oct):
 
-- **parser** — fixed () → close as completed
+- **parser** — fixed (`fix(dates): parse dd/mm for eu locales`) → close as completed
 - **hint** — won't fix (booking-v3 form retired) → close as not planned
 
 <RenderStamp {signature} />
