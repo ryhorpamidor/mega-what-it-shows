@@ -4,7 +4,7 @@ title: '#4471 · two causes, one ticket'
 owner: support desk
 status: draft
 reviewed: 2026-11-02
-signature: redi
+signature: v1.eyJzdWIiOiI1NTM1IiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTM2NTg2MDksImV4cCI6MTc5Mzc0NTAwOX0.COffjQ60YHBbkcr1Wn20TJX2Ydy_LM43-kcAFt_xqlw
 ---
 
 <script>
@@ -41,4 +41,4 @@ Only one of them is the ticket the desk kept.
 Intake tags disagree with cause often enough that tagging alone cannot justify
 the merge. Deduping by subject (decision 0001) put both causes into one thread.
 
-<RenderStamp signature="redi" />
+<RenderStamp {signature} />
